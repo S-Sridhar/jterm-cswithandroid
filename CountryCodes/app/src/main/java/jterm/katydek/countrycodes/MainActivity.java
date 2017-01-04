@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         // Make sure to check your edge cases! How will you handle errors?
         // Your code here
         //
-        return "not yet implemented! cats rock!";
+        String result = mCountryCodes.get(query.toUpperCase());
+        return result;
     }
 
     private void readCountryCodesFile() {
@@ -70,11 +71,15 @@ public class MainActivity extends AppCompatActivity {
             reader.readLine();
             String line = reader.readLine();
             while (line != null) {
+                Log.d("parsing", line);
                 String[] parts = line.split(",");
                 //
                 // Now we need to populate the mCountryCodes HashMap so we can use it for lookup!
                 // Your code here.
                 //
+                String key = parts[2];
+                String value = parts[1];
+                mCountryCodes.put(key,value);
                 line = reader.readLine();
             }
             inputStream.close();
