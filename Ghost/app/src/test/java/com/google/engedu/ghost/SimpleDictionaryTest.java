@@ -30,12 +30,19 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 public class SimpleDictionaryTest {
-
+    String[] wordsArray = {"apple", "ball", "cat", "cathy", "dog"};
     @Test
     public void testIsWord() {
     }
 
     @Test
     public void testGetAnyWordStartingWith() {
+
+        ArrayList<String> words = new ArrayList<>(Arrays.asList(wordsArray));
+        SimpleDictionary dict  = new SimpleDictionary(words, 0);
+        assertEquals("apple", dict.getAnyWordStartingWith("a"));
+        assertNotNull(dict.getAnyWordStartingWith(""));
+        Assert.assertTrue(dict.getAnyWordStartingWith("ca").startsWith("ca"));
+
     }
 }
