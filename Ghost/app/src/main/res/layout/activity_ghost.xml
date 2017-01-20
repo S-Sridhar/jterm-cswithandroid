@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Starting game"
+            android:text="@string/initial_status"
             android:id="@+id/gameStatus"
             android:layout_below="@id/ghostText"
             android:layout_alignParentStart="true"
@@ -50,17 +50,17 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Challenge"
+            android:text="@string/challenge_btn"
             android:layout_below="@id/gameStatus"
-            android:id="@+id/challenge"
+            android:id="@+id/challenge_button"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reset"
+            android:text="@string/reset_btn"
             android:layout_below="@id/gameStatus"
-            android:layout_toRightOf="@id/challenge"
-            android:id="@+id/reset"
+            android:layout_toRightOf="@id/challenge_button"
+            android:id="@+id/reset_button"
             />
 
 

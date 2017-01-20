@@ -1,5 +1,7 @@
 package com.google.engedu.ghost;
 
+import junit.framework.Assert;
+
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -27,11 +29,17 @@ import static org.junit.Assert.assertTrue;
  *  limitations under the License.
  */
 public class FastDictionaryTest {
-    @Test
-    public void testIsWord() {
-    }
+    String[] wordsArray = {"apple", "cat", "caterwaul", "caterwauled", "caterwauling", "caterwauls",
+            "catfish", "catfishes", "cats", "dog", "dogs", "dogfish", "dogfishes", "life", "lives"};
 
     @Test
-    public void testGetAnyWordStartingWith() {
+    public void testIsWord() {
+        ArrayList<String> words = new ArrayList<>(Arrays.asList(wordsArray));
+        FastDictionary dict = new FastDictionary(words);
+
+        assertTrue(dict.isWord("cat"));
+        assertTrue(dict.isWord("cats"));
+        assertFalse(dict.isWord("c"));
+        assertFalse(dict.isWord("fish"));
     }
 }

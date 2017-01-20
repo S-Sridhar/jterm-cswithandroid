@@ -13,34 +13,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your score: 0 Computer Score: 0"
-        android:id="@+id/score"
-        android:paddingBottom="5dp"
-        />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ROLL"
-        android:layout_below="@id/dice"
-        android:id="@+id/roll"
-    />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HOLD"
-        android:layout_below="@id/dice"
-        android:layout_toRightOf="@id/roll"
-        android:id="@+id/hold"
-    />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_below="@id/dice"
-        android:layout_toRightOf="@id/hold"
+        android:text="Your score: 0  Computer Score: 0"
+        android:id="@+id/score_display"
         />
 
     <ImageView
@@ -48,9 +22,37 @@
         android:layout_height="wrap_content"
         android:src="@drawable/dice1"
         android:id="@+id/dice"
+        android:layout_below="@+id/score_display"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="15dp"/>
 
-        android:layout_below="@+id/score"
-        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROLL"
+        android:layout_below="@id/dice"
+        android:id="@+id/roll_button"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOLD"
+        android:layout_below="@id/dice"
+        android:layout_toRightOf="@id/roll_button"
+        android:id="@+id/hold_button"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_below="@id/dice"
+        android:layout_toRightOf="@id/hold_button"
+        android:id="@+id/reset_button"
+        />
+
+
 
 
 </RelativeLayout>
